@@ -1,6 +1,8 @@
-(function(r) {
+(function(routers, runtime, collections) {
 
-  new r.Main();
+  runtime.Photos = new collections.Photos();
+
+  new routers.Main();
   Backbone.history.start();
 
-})(APP.Routers);
+})(APP.Routers, APP.Runtime, APP.Collections);

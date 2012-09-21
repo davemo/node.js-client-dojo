@@ -16,17 +16,23 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#home">PhotoViewer</a>
+          <a class="brand author" href="http://www.twitter.com/dmosher"><span class="muted">by</span> @dmosher</a>
           <div class="nav-collapse">
             <ul class="nav">
-                <li>
-                    <a href="#photos">Search</a>
-                </li>
-                <li>
-                	<a href="#photos/lolcats">Cat Pictures</a>
-                </li>
-                <li>
-                	<a href="#photos/dogs">Dog Pictures</a>
-                </li>
+              <li>
+                <a href="#photos">Search</a>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Favorite Searches</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#photos/lolcats">Funny Cats</a>
+                  </li>
+                  <li>
+                    <a href="#photos/dogs">Unfunny Dogs</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>

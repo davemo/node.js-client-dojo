@@ -4,10 +4,14 @@
   "version": "0.0.1",
   "private": true,
   "author": {
-    "name": "John Doe",
-    "company": "ACME, Inc."
+    "name": "Dave Mosher",
+    "company": "Prairie DevCon"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express" : "3.0.0rc4",
+    "request" : "~2.11.4",
+    "handlebars" : "1.0.7"
+  },
   "devDependencies": {
     "grunt": "~0.3.10",
     "grunt-contrib": "~0.1.1",

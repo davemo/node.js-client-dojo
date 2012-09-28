@@ -2,11 +2,11 @@ var express            = require('express'),
     request            = require('request'),
     app                = express.createServer(),
     FLICKR_KEY      = "dc43133eacbf9aa77ba291e2893c9caa",
-    FLICKR_SECRET   = "f2e707741f9d4cf1",
     FLICKR_API_ROOT = "http://api.flickr.com/services/rest/?per_page=30&nojsoncallback=1&format=json&api_key=" + FLICKR_KEY;
 
 app.configure(function() {
   app.use(express.static(process.cwd() + "/generated"));
+  app.use("/stubs", express.static(process.cwd() + "/stubs"));
   app.use(express.bodyParser());
   app.use(express.errorHandler());
 });

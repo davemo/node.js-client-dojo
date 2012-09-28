@@ -1,21 +1,24 @@
 (function(c, m) {
 
   c.Photos = Backbone.Collection.extend({
-    url: '/proxy/photos/',
+    url: '/stubs/flickr.lolcats.json',
     model: m.FlickrPhoto,
-    initialize: function() {
-      _.bindAll(this);
-    },
-    fetch: function(params) {
-      $.ajax({
-        type: 'GET',
-        url: this.url + params.query,
-        success: this.success
-      });
-    },
-    success: function(response) {
-      this.reset(response.photos.photo);
+    parse: function(response) {
+      return response.photos.photo;
     }
   });
+  
+  // c.Photos = Backbone.Collection.extend({
+  //   url: '/proxy/photos/',
+  //   model: m.FlickrPhoto,
+  //   fetch: function(options) {
+  //     options.url = this.url + options.query;
+  //     // http://documentcloud.github.com/backbone/docs/backbone.html#section-98
+  //     Backbone.Collection.prototype.fetch.call(this, options);
+  //   },
+  //   parse: function(response) {
+  //     return response.photos.photo;
+  //   }
+  // });
 
 })(APP.Collections, APP.Models);
